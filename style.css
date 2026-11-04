@@ -269,76 +269,55 @@ header nav > a:last-child:hover {
     font-weight: 500;
 }
 
-/* Projects section */
-#projects {
-    padding-top: 65px;
-    padding-bottom: 65px;
-}
 
-#projects > div:first-child {
-    margin-bottom: 35px;
-    text-align: center;
-}
+/* My Projects Section */
 
-#projects > div:first-child > span > p:nth-child(2) {
-    color: #0369a1;
-    font-size: 34px;
-}
-
-#projects > div:first-child > span > p:nth-child(3) {
-    color: #0284c7;
-}
-
-/* Project cards: desktop and laptop */
-#projects > div.flex {
+#projects .project-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    width: 100%;
+    gap: 30px;
     max-width: 1150px;
+    width: 100%;
     margin: 0 auto;
 }
 
-#projects > div.flex > div {
+#projects .project-card {
+    width: 100%;
     min-width: 0;
-    padding: 26px;
-    border: 1px solid #dbeafe;
-    border-radius: 18px;
+    padding: 30px;
     background-color: #ffffff;
-    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
-    overflow-wrap: anywhere;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #dbeafe;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+    overflow-wrap: break-word;
+    transition: transform 0.3s ease;
 }
 
-#projects > div.flex > div:hover {
+#projects .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 28px rgba(2, 132, 199, 0.10);
 }
 
-#projects > div.flex > div > p:first-child {
+#projects .project-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00c853;
+    line-height: 1.5;
+}
+
+#projects .project-number {
     color: #0369a1;
-    font-size: 21px;
-    font-weight: 700;
+    flex-shrink: 0;
 }
 
-#projects > div.flex > div > p:first-child i {
-    margin-left: 8px;
-}
-
-#projects > div.flex > div > p:nth-child(2) {
-    color: #334155;
-    font-weight: 600;
-}
-
-#projects > div.flex > div > p:nth-child(3) {
-    color: #475569;
+#projects .project-tech {
+    margin-top: 20px;
+    font-size: 14px;
     line-height: 1.8;
-}
-
-#projects > div.flex > div > p:last-child {
-    color: #0369a1;
-    font-size: 13px;
-    line-height: 1.8;
+    color: #0284c7;
     overflow-wrap: anywhere;
 }
 
@@ -384,330 +363,69 @@ header nav > a:last-child:hover {
     padding-top: 20px;
 }
 
-/* Tablet screens */
-@media screen and (max-width: 1023px) {
-    #skills .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+/* Laptop and Tablet */
+
+@media screen and (max-width: 1024px) {
+
+    #projects .project-grid {
         gap: 20px;
     }
 
-    #projects > div.flex {
-        gap: 18px;
-    }
-
-    #projects > div.flex > div {
-        padding: 22px;
-    }
-
-    .banner-photo,
-    .banner-photo > div.relative {
-        min-height: 450px;
-    }
-
-    .banner-photo > div.relative > div {
-        max-width: 600px;
-    }
-
-    #about > div {
-        padding: 28px;
-    }
-}
-
-/* Laptop screens */
-@media screen and (min-width: 768px) and (max-width: 1366px) {
-    #projects > div.flex {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 25px;
-        max-width: 1100px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    #projects > div.flex > div {
-        min-width: 0;
-        height: 100%;
+    #projects .project-card {
         padding: 24px;
     }
 
-    #projects > div.flex > div > p {
-        overflow-wrap: anywhere;
+    #projects .project-title {
+        font-size: 21px;
     }
 
-    #projects > div.flex > div > p:first-child {
-        font-size: 20px;
-    }
-
-    #projects > div.flex > div > p:last-child {
-        font-size: 13px;
-        line-height: 1.8;
-    }
 }
 
-/* Mobile screens */
+/* Mobile */
+
 @media screen and (max-width: 767px) {
-    header nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 14px 16px;
-    }
 
-    header nav > a:first-child {
-        font-size: 20px;
-        white-space: normal;
-    }
-
-    header nav > a:last-child {
-        padding: 9px 12px;
-        font-size: 12px;
-    }
-
-    header nav > div {
-        display: flex !important;
-        order: 3;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px 20px;
-        padding: 8px 0 3px;
-        font-size: 13px;
-    }
-
-    #home {
-        padding: 20px 12px;
-    }
-
-    .banner-photo {
-        min-height: 480px;
-        width: 100%;
-        border-radius: 18px;
-    }
-
-    .banner-photo > img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 70% center;
-    }
-
-    .banner-overlay {
-        background: linear-gradient(
-            90deg,
-            rgba(2, 6, 23, 0.92),
-            rgba(2, 6, 23, 0.72)
-        );
-    }
-
-    .banner-photo > div.relative {
-        min-height: 480px;
-        padding: 30px 20px;
-    }
-
-    .banner-photo > div.relative > div {
-        max-width: 100%;
-    }
-
-    .banner-photo > div.relative p:first-child {
-        font-size: 11px;
-        letter-spacing: 2px;
-    }
-
-    .banner-photo h2 {
-        font-size: 30px;
-    }
-
-    .banner-photo h1 {
-        font-size: clamp(28px, 7vw, 42px);
-        line-height: 1.2;
-        overflow-wrap: anywhere;
-    }
-
-    .banner-photo a[href="#contact"] {
-        padding: 11px 22px;
-        font-size: 13px;
-    }
-
-    /* About */
-    #about {
-        padding: 40px 16px;
-    }
-
-    #about > div {
-        padding: 22px;
-        border-radius: 14px;
-    }
-
-    #about h1 {
-        font-size: 28px;
-    }
-
-    #about h1 p {
-        font-size: 16px;
-        letter-spacing: 2px;
-    }
-
-    #about > div > p {
-        font-size: 14px;
-        line-height: 1.85;
-    }
-
-    /* Skills */
-    #skills {
-        padding: 42px 16px;
-    }
-
-    #skills .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-    }
-
-    #skills .grid > a {
-        padding: 14px 11px;
-        border-radius: 12px;
-    }
-
-    #skills .grid > a > div:first-child {
-        min-height: 65px;
-        padding: 8px;
-    }
-
-    #skills .grid h3 {
-        font-size: 14px;
-    }
-
-    #skills .grid > a > div:nth-child(2) p {
-        font-size: 12px;
-        overflow-wrap: anywhere;
-    }
-
-    #skills .grid h4 {
-        font-size: 11px;
-    }
-
-    /* Projects */
-    #projects {
-        padding: 42px 16px;
-    }
-
-    #projects > div:first-child > span > p:nth-child(2) {
-        font-size: 27px;
-    }
-
-    #projects > div:first-child > span > p:nth-child(3) {
-        font-size: 20px;
-        overflow-wrap: anywhere;
-    }
-
-    #projects > div.flex {
+    #projects .project-grid {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 20px;
     }
 
-    #projects > div.flex > div {
-        width: 100%;
-        padding: 20px;
-        border-radius: 14px;
+    #projects .project-card {
+        padding: 22px;
     }
 
-    #projects > div.flex > div > p:first-child {
-        font-size: 19px;
+    #projects .project-title {
+        font-size: 20px;
     }
 
-    #projects > div.flex > div > p:nth-child(3) {
-        font-size: 14px;
+    #projects .project-tech {
+        font-size: 13px;
     }
 
-    #projects > div.flex > div > p:last-child {
-        font-size: 12px;
-    }
-
-    /* Contact */
-    #contact {
-        padding: 35px 18px 20px;
-    }
-
-    #contact h3 {
-        font-size: 22px;
-    }
-
-    #contact > div:first-child > p:first-of-type {
-        font-size: 15px;
-    }
-
-    #contact > div:last-of-type {
-        gap: 10px;
-        text-align: center;
-    }
 }
 
-/* Very small mobile screens */
+/* Small Mobile */
+
 @media screen and (max-width: 400px) {
-    header nav > a:first-child {
-        font-size: 17px;
-    }
 
-    header nav > a:last-child {
-        padding: 8px 9px;
-        font-size: 10px;
-    }
-
-    header nav > div {
-        gap: 10px 14px;
-        font-size: 12px;
-    }
-
-    .banner-photo,
-    .banner-photo > div.relative {
-        min-height: 430px;
-    }
-
-    .banner-photo > div.relative {
-        padding: 25px 16px;
-    }
-
-    .banner-photo h1 {
-        font-size: 28px;
-    }
-
-    .banner-photo h2 {
-        font-size: 26px;
-    }
-
-    #skills .grid {
-        gap: 10px;
-    }
-
-    #skills .grid > a {
-        padding: 12px 8px;
-    }
-
-    #skills .grid h3 {
-        font-size: 12px;
-    }
-
-    #projects > div.flex > div {
-        padding: 16px;
-    }
-}
-
-/* Large desktop screens */
-@media screen and (min-width: 1440px) {
-    #home {
-        padding-top: 45px;
-        padding-bottom: 45px;
-    }
-
-    .banner-photo,
-    .banner-photo > div.relative {
-        min-height: 550px;
-    }
-
-    #about,
-    #skills,
     #projects {
-        padding-top: 85px;
-        padding-bottom: 85px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
+
+    #projects .project-card {
+        padding: 18px;
+    }
+
+    #projects .project-title {
+        font-size: 18px;
+    }
+
+    #projects .project-tech {
+        font-size: 12px;
+    }
+
 }
+
+
